@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {csv} from 'd3-request';
 import logo from './logo.svg';
 import './App.css';
+import Scatterplot from './scatterplot';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    csv('./src/data/birthdeathrates.csv', (error, data) => {
+    csv('./birthdeathrates.csv', (error, data) => {
       if (error) {
         this.setState({loadError: true});
       }
