@@ -1,9 +1,11 @@
-{
+{  
+  "homepage": "https://linazoo.github.io/scatterplot",
   "name": "birth-rate-data-vis",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "d3": "^4.13.0",
+    "gh-pages": "^1.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
@@ -11,6 +13,8 @@
     "request": "^2.85.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
